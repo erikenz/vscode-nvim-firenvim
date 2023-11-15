@@ -1,84 +1,4 @@
-# VSCode/Neovim/Firenvim Config
-
-> **Note**: I'm new to vim so this may not be ideal to copy from or might not contain best practices
-
-This repo contains the configuration for:
-
-- VSCode with [VSCode Neovim](https://github.com/vscode-neovim/vscode-neovim) and [Whichkey](https://github.com/VSpaceCode/vscode-which-key)
-- Neovim featured to work like vscode
-- Firenvim to use nvim in the browser
-
-<strong>Table of Contents</strong>
-
-- [VSCode/Neovim/Firenvim Config](#vscodeneovimfirenvim-config)
-  - [Getting Started](#getting-started)
-    - [Installation](#installation)
-    - [Neovim configuration](#neovim-configuration)
-    - [VSCode configuration](#vscode-configuration)
-    - [Firenvim configuration](#firenvim-configuration)
-    - [Adding keybindings](#adding-keybindings)
-  - [Bindings](#bindings)
-    - [VSCode](#vscode)
-      - [Editor](#editor)
-      - [UI](#ui)
-      - [Extensions](#extensions)
-    - [Neovim](#neovim)
-      - [Code](#code)
-      - [General](#general)
-      - [LSP](#lsp)
-      - [bufferline.nvim](#bufferlinenvim)
-      - [conform.nvim](#conformnvim)
-      - [flash.nvim](#flashnvim)
-      - [mason.nvim](#masonnvim)
-      - [mini.bufremove](#minibufremove)
-      - [mini.pairs](#minipairs)
-      - [mini.surround](#minisurround)
-      - [neo-tree.nvim](#neo-treenvim)
-      - [noice.nvim](#noicenvim)
-      - [nvim-notify](#nvim-notify)
-      - [nvim-spectre](#nvim-spectre)
-      - [nvim-treesitter](#nvim-treesitter)
-      - [nvim-treesitter-context](#nvim-treesitter-context)
-      - [persistence.nvim](#persistencenvim)
-      - [telescope.nvim](#telescopenvim)
-      - [todo-comments.nvim](#todo-commentsnvim)
-      - [trouble.nvim](#troublenvim)
-      - [vim-illuminate](#vim-illuminate)
-      - [yanky.nvim](#yankynvim)
-      - [nvim-dap](#nvim-dap)
-      - [nvim-dap-ui](#nvim-dap-ui)
-      - [aerial.nvim](#aerialnvim)
-      - [telescope.nvim](#telescopenvim-1)
-      - [flit.nvim](#flitnvim)
-      - [leap.nvim](#leapnvim)
-      - [mini.files](#minifiles)
-      - [symbols-outline.nvim](#symbols-outlinenvim)
-      - [markdown-preview.nvim](#markdown-previewnvim)
-      - [nvim-dap-python](#nvim-dap-python)
-      - [venv-selector.nvim](#venv-selectornvim)
-      - [neotest](#neotest)
-      - [nvim-dap](#nvim-dap-1)
-      - [edgy.nvim](#edgynvim)
-      - [project.nvim](#projectnvim)
-  - [Credits \& External Resources](#credits--external-resources)
-
-## Getting Started
-
-### Installation
-
-### Neovim configuration
-
-### VSCode configuration
-
-### Firenvim configuration
-
-### Adding keybindings
-
-<!-- keymaps:start -->
-
-## Bindings
-
-This is a very extensive keybindings list to help me learn vim
+# Keybindings
 
 **LazyVim** uses [which-key.nvim](https://github.com/folke/which-key.nvim) to help you remember your
 keymaps. Just press any key like `<space>` and you'll see a popup with all
@@ -89,38 +9,67 @@ possible keymaps starting with `<space>`.
 - default `<leader>` is `<space>`
 - default `<localleader>` is `\`
 
-**VSCode** is able to replicate [which-key.nvim](https://github.com/folke/which-key.nvim) with the [Whichkey](https://github.com/VSpaceCode/vscode-which-key) extension. This is also configured to open with `<space>`. Make sure you copy the configuration from [settings.json](vscode-config/settings.json).
+**Table of contents:**
 
-### VSCode
+- [Keybindings](#keybindings)
+  - [VSCode](#vscode)
+    - [UI](#ui)
+    - [Extensions](#extensions)
+  - [General](#general)
+  - [LSP](#lsp)
+  - [bufferline.nvim](#bufferlinenvim)
+  - [conform.nvim](#conformnvim)
+  - [flash.nvim](#flashnvim)
+  - [mason.nvim](#masonnvim)
+  - [mini.bufremove](#minibufremove)
+  - [mini.pairs](#minipairs)
+  - [mini.surround](#minisurround)
+  - [neo-tree.nvim](#neo-treenvim)
+  - [noice.nvim](#noicenvim)
+  - [nvim-notify](#nvim-notify)
+  - [nvim-spectre](#nvim-spectre)
+  - [nvim-treesitter](#nvim-treesitter)
+  - [nvim-treesitter-context](#nvim-treesitter-context)
+  - [persistence.nvim](#persistencenvim)
+  - [telescope.nvim](#telescopenvim)
+  - [todo-comments.nvim](#todo-commentsnvim)
+  - [trouble.nvim](#troublenvim)
+  - [vim-illuminate](#vim-illuminate)
+  - [yanky.nvim](#yankynvim)
+  - [nvim-dap](#nvim-dap)
+  - [nvim-dap-ui](#nvim-dap-ui)
+  - [aerial.nvim](#aerialnvim)
+  - [telescope.nvim](#telescopenvim-1)
+  - [flit.nvim](#flitnvim)
+  - [leap.nvim](#leapnvim)
+  - [mini.files](#minifiles)
+  - [symbols-outline.nvim](#symbols-outlinenvim)
+  - [markdown-preview.nvim](#markdown-previewnvim)
+  - [nvim-dap-python](#nvim-dap-python)
+  - [venv-selector.nvim](#venv-selectornvim)
+  - [neotest](#neotest)
+  - [nvim-dap](#nvim-dap-1)
+  - [edgy.nvim](#edgynvim)
+  - [project.nvim](#projectnvim)
 
-#### Editor
+<!-- keymaps:start -->
 
-| Key              | Description              | Mode         |
-| ---------------- | ------------------------ | ------------ |
-| <code>gcc</code> | Toggle comment selection | **n**, **v** |
+## VSCode
 
-#### UI
+### UI
 
 | Key                          | Description               | Mode |
 | ---------------------------- | ------------------------- | ---- |
 | <code>&lt;leader&gt;e</code> | Toggle sidebar visibility |      |
 
-#### Extensions
+### Extensions
 
 | Key                          | Description    | Mode         |
 | ---------------------------- | -------------- | ------------ |
 | <code>&lt;leader&gt;i</code> | Toggle boolean | **n**, **i** |
 | <code>&lt;leader&gt;</code   | Open whichkey  | **n**, **v** |
 
-### Neovim
-
-#### Code
-
-| Key              | Description              | Mode         |
-| ---------------- | ------------------------ | ------------ |
-| <code>gcc</code> | Toggle comment selection | **n**, **v** |
-
-#### General
+## General
 
 | Key                                               | Description                           | Mode                       |
 | ------------------------------------------------- | ------------------------------------- | -------------------------- |
@@ -194,7 +143,7 @@ possible keymaps starting with `<space>`.
 | <code>&lt;leader&gt;&lt;tab&gt;d</code>           | Close Tab                             | **n**                      |
 | <code>&lt;leader&gt;&lt;tab&gt;[</code>           | Previous Tab                          | **n**                      |
 
-#### LSP
+## LSP
 
 | Key                           | Description            | Mode         |
 | ----------------------------- | ---------------------- | ------------ |
@@ -211,7 +160,7 @@ possible keymaps starting with `<space>`.
 | <code>&lt;leader&gt;cA</code> | Source Action          | **n**        |
 | <code>&lt;leader&gt;cr</code> | Rename                 | **n**        |
 
-#### [bufferline.nvim](https://github.com/akinsho/bufferline.nvim.git)
+## [bufferline.nvim](https://github.com/akinsho/bufferline.nvim.git)
 
 | Key                           | Description                 | Mode  |
 | ----------------------------- | --------------------------- | ----- |
@@ -225,13 +174,13 @@ possible keymaps starting with `<space>`.
 | <code>&lt;S-h&gt;</code>      | Prev buffer                 | **n** |
 | <code>&lt;S-l&gt;</code>      | Next buffer                 | **n** |
 
-#### [conform.nvim](https://github.com/stevearc/conform.nvim.git)
+## [conform.nvim](https://github.com/stevearc/conform.nvim.git)
 
 | Key                           | Description           | Mode         |
 | ----------------------------- | --------------------- | ------------ |
 | <code>&lt;leader&gt;cF</code> | Format Injected Langs | **n**, **v** |
 
-#### [flash.nvim](https://github.com/folke/flash.nvim.git)
+## [flash.nvim](https://github.com/folke/flash.nvim.git)
 
 | Key                      | Description         | Mode                |
 | ------------------------ | ------------------- | ------------------- |
@@ -241,26 +190,26 @@ possible keymaps starting with `<space>`.
 | <code>s</code>           | Flash               | **n**, **o**, **x** |
 | <code>S</code>           | Flash Treesitter    | **n**, **o**, **x** |
 
-#### [mason.nvim](https://github.com/williamboman/mason.nvim.git)
+## [mason.nvim](https://github.com/williamboman/mason.nvim.git)
 
 | Key                           | Description | Mode  |
 | ----------------------------- | ----------- | ----- |
 | <code>&lt;leader&gt;cm</code> | Mason       | **n** |
 
-#### [mini.bufremove](https://github.com/echasnovski/mini.bufremove.git)
+## [mini.bufremove](https://github.com/echasnovski/mini.bufremove.git)
 
 | Key                           | Description           | Mode  |
 | ----------------------------- | --------------------- | ----- |
 | <code>&lt;leader&gt;bd</code> | Delete Buffer         | **n** |
 | <code>&lt;leader&gt;bD</code> | Delete Buffer (Force) | **n** |
 
-#### [mini.pairs](https://github.com/echasnovski/mini.pairs.git)
+## [mini.pairs](https://github.com/echasnovski/mini.pairs.git)
 
 | Key                           | Description       | Mode  |
 | ----------------------------- | ----------------- | ----- |
 | <code>&lt;leader&gt;up</code> | Toggle auto pairs | **n** |
 
-#### [mini.surround](https://github.com/echasnovski/mini.surround.git)
+## [mini.surround](https://github.com/echasnovski/mini.surround.git)
 
 | Key              | Description                          | Mode         |
 | ---------------- | ------------------------------------ | ------------ |
@@ -272,7 +221,7 @@ possible keymaps starting with `<space>`.
 | <code>gsn</code> | Update `MiniSurround.config.n_lines` | **n**        |
 | <code>gsr</code> | Replace surrounding                  | **n**        |
 
-#### [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim.git)
+## [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim.git)
 
 | Key                           | Description                 | Mode  |
 | ----------------------------- | --------------------------- | ----- |
@@ -283,7 +232,7 @@ possible keymaps starting with `<space>`.
 | <code>&lt;leader&gt;fE</code> | Explorer NeoTree (cwd)      | **n** |
 | <code>&lt;leader&gt;ge</code> | Git explorer                | **n** |
 
-#### [noice.nvim](https://github.com/folke/noice.nvim.git)
+## [noice.nvim](https://github.com/folke/noice.nvim.git)
 
 | Key                            | Description        | Mode                |
 | ------------------------------ | ------------------ | ------------------- |
@@ -295,32 +244,32 @@ possible keymaps starting with `<space>`.
 | <code>&lt;leader&gt;snl</code> | Noice Last Message | **n**               |
 | <code>&lt;S-Enter&gt;</code>   | Redirect Cmdline   | **c**               |
 
-#### [nvim-notify](https://github.com/rcarriga/nvim-notify.git)
+## [nvim-notify](https://github.com/rcarriga/nvim-notify.git)
 
 | Key                           | Description               | Mode  |
 | ----------------------------- | ------------------------- | ----- |
 | <code>&lt;leader&gt;un</code> | Dismiss all Notifications | **n** |
 
-#### [nvim-spectre](https://github.com/nvim-pack/nvim-spectre.git)
+## [nvim-spectre](https://github.com/nvim-pack/nvim-spectre.git)
 
 | Key                           | Description                | Mode  |
 | ----------------------------- | -------------------------- | ----- |
 | <code>&lt;leader&gt;sr</code> | Replace in files (Spectre) | **n** |
 
-#### [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter.git)
+## [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter.git)
 
 | Key                          | Description         | Mode  |
 | ---------------------------- | ------------------- | ----- |
 | <code>&lt;bs&gt;</code>      | Decrement selection | **x** |
 | <code>&lt;c-space&gt;</code> | Increment selection | **n** |
 
-#### [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context.git)
+## [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context.git)
 
 | Key                           | Description               | Mode  |
 | ----------------------------- | ------------------------- | ----- |
 | <code>&lt;leader&gt;ut</code> | Toggle Treesitter Context | **n** |
 
-#### [persistence.nvim](https://github.com/folke/persistence.nvim.git)
+## [persistence.nvim](https://github.com/folke/persistence.nvim.git)
 
 | Key                           | Description                | Mode  |
 | ----------------------------- | -------------------------- | ----- |
@@ -328,7 +277,7 @@ possible keymaps starting with `<space>`.
 | <code>&lt;leader&gt;ql</code> | Restore Last Session       | **n** |
 | <code>&lt;leader&gt;qs</code> | Restore Session            | **n** |
 
-#### [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim.git)
+## [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim.git)
 
 | Key                                      | Description              | Mode  |
 | ---------------------------------------- | ------------------------ | ----- |
@@ -368,7 +317,7 @@ possible keymaps starting with `<space>`.
 | <code>&lt;leader&gt;sW</code>            | Selection (cwd)          | **v** |
 | <code>&lt;leader&gt;uC</code>            | Colorscheme with preview | **n** |
 
-#### [todo-comments.nvim](https://github.com/folke/todo-comments.nvim.git)
+## [todo-comments.nvim](https://github.com/folke/todo-comments.nvim.git)
 
 | Key                           | Description              | Mode  |
 | ----------------------------- | ------------------------ | ----- |
@@ -379,7 +328,7 @@ possible keymaps starting with `<space>`.
 | <code>[t</code>               | Previous todo comment    | **n** |
 | <code>]t</code>               | Next todo comment        | **n** |
 
-#### [trouble.nvim](https://github.com/folke/trouble.nvim.git)
+## [trouble.nvim](https://github.com/folke/trouble.nvim.git)
 
 | Key                           | Description                     | Mode  |
 | ----------------------------- | ------------------------------- | ----- |
@@ -390,14 +339,14 @@ possible keymaps starting with `<space>`.
 | <code>[q</code>               | Previous trouble/quickfix item  | **n** |
 | <code>]q</code>               | Next trouble/quickfix item      | **n** |
 
-#### [vim-illuminate](https://github.com/RRethy/vim-illuminate.git)
+## [vim-illuminate](https://github.com/RRethy/vim-illuminate.git)
 
 | Key             | Description    | Mode  |
 | --------------- | -------------- | ----- |
 | <code>[[</code> | Prev Reference | **n** |
 | <code>]]</code> | Next Reference | **n** |
 
-#### [yanky.nvim](https://github.com/gbprod/yanky.nvim.git)
+## [yanky.nvim](https://github.com/gbprod/yanky.nvim.git)
 
 Part of [lazyvim.plugins.extras.coding.yanky](/extras/coding/yanky)
 
@@ -422,7 +371,7 @@ Part of [lazyvim.plugins.extras.coding.yanky](/extras/coding/yanky)
 | <code>P</code>               | Put yanked text before cursor         | **n**, **x** |
 | <code>y</code>               | Yank text                             | **n**, **x** |
 
-#### [nvim-dap](https://github.com/mfussenegger/nvim-dap.git)
+## [nvim-dap](https://github.com/mfussenegger/nvim-dap.git)
 
 Part of [lazyvim.plugins.extras.dap.core](/extras/dap/core)
 
@@ -446,7 +395,7 @@ Part of [lazyvim.plugins.extras.dap.core](/extras/dap/core)
 | <code>&lt;leader&gt;dt</code> | Terminate               | **n** |
 | <code>&lt;leader&gt;dw</code> | Widgets                 | **n** |
 
-#### [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui.git)
+## [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui.git)
 
 Part of [lazyvim.plugins.extras.dap.core](/extras/dap/core)
 
@@ -455,7 +404,7 @@ Part of [lazyvim.plugins.extras.dap.core](/extras/dap/core)
 | <code>&lt;leader&gt;de</code> | Eval        | **n**, **v** |
 | <code>&lt;leader&gt;du</code> | Dap UI      | **n**        |
 
-#### [aerial.nvim](https://github.com/stevearc/aerial.nvim.git)
+## [aerial.nvim](https://github.com/stevearc/aerial.nvim.git)
 
 Part of [lazyvim.plugins.extras.editor.aerial](/extras/editor/aerial)
 
@@ -463,7 +412,7 @@ Part of [lazyvim.plugins.extras.editor.aerial](/extras/editor/aerial)
 | ----------------------------- | ---------------- | ----- |
 | <code>&lt;leader&gt;cs</code> | Aerial (Symbols) | **n** |
 
-#### [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim.git)
+## [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim.git)
 
 Part of [lazyvim.plugins.extras.editor.aerial](/extras/editor/aerial)
 
@@ -471,7 +420,7 @@ Part of [lazyvim.plugins.extras.editor.aerial](/extras/editor/aerial)
 | ----------------------------- | -------------------- | ----- |
 | <code>&lt;leader&gt;ss</code> | Goto Symbol (Aerial) | **n** |
 
-#### [flit.nvim](https://github.com/ggandor/flit.nvim.git)
+## [flit.nvim](https://github.com/ggandor/flit.nvim.git)
 
 Part of [lazyvim.plugins.extras.editor.leap](/extras/editor/leap)
 
@@ -482,7 +431,7 @@ Part of [lazyvim.plugins.extras.editor.leap](/extras/editor/leap)
 | <code>t</code> | t           | **n**, **o**, **x** |
 | <code>T</code> | T           | **n**, **o**, **x** |
 
-#### [leap.nvim](https://github.com/ggandor/leap.nvim.git)
+## [leap.nvim](https://github.com/ggandor/leap.nvim.git)
 
 Part of [lazyvim.plugins.extras.editor.leap](/extras/editor/leap)
 
@@ -492,7 +441,7 @@ Part of [lazyvim.plugins.extras.editor.leap](/extras/editor/leap)
 | <code>s</code>  | Leap forward to   | **n**, **o**, **x** |
 | <code>S</code>  | Leap backward to  | **n**, **o**, **x** |
 
-#### [mini.files](https://github.com/echasnovski/mini.files.git)
+## [mini.files](https://github.com/echasnovski/mini.files.git)
 
 Part of [lazyvim.plugins.extras.editor.mini-files](/extras/editor/mini-files)
 
@@ -501,7 +450,7 @@ Part of [lazyvim.plugins.extras.editor.mini-files](/extras/editor/mini-files)
 | <code>&lt;leader&gt;fm</code> | Open mini.files (directory of current file) | **n** |
 | <code>&lt;leader&gt;fM</code> | Open mini.files (cwd)                       | **n** |
 
-#### [symbols-outline.nvim](https://github.com/simrat39/symbols-outline.nvim.git)
+## [symbols-outline.nvim](https://github.com/simrat39/symbols-outline.nvim.git)
 
 Part of [lazyvim.plugins.extras.editor.symbols-outline](/extras/editor/symbols-outline)
 
@@ -509,7 +458,7 @@ Part of [lazyvim.plugins.extras.editor.symbols-outline](/extras/editor/symbols-o
 | ----------------------------- | --------------- | ----- |
 | <code>&lt;leader&gt;cs</code> | Symbols Outline | **n** |
 
-#### [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim.git)
+## [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim.git)
 
 Part of [lazyvim.plugins.extras.lang.markdown](/extras/lang/markdown)
 
@@ -517,7 +466,7 @@ Part of [lazyvim.plugins.extras.lang.markdown](/extras/lang/markdown)
 | ----------------------------- | ---------------- | ----- |
 | <code>&lt;leader&gt;cp</code> | Markdown Preview | **n** |
 
-#### [nvim-dap-python](https://github.com/mfussenegger/nvim-dap-python.git)
+## [nvim-dap-python](https://github.com/mfussenegger/nvim-dap-python.git)
 
 Part of [lazyvim.plugins.extras.lang.python](/extras/lang/python)
 
@@ -526,7 +475,7 @@ Part of [lazyvim.plugins.extras.lang.python](/extras/lang/python)
 | <code>&lt;leader&gt;dPc</code> | Debug Class  | **n** |
 | <code>&lt;leader&gt;dPt</code> | Debug Method | **n** |
 
-#### [venv-selector.nvim](https://github.com/linux-cultist/venv-selector.nvim.git)
+## [venv-selector.nvim](https://github.com/linux-cultist/venv-selector.nvim.git)
 
 Part of [lazyvim.plugins.extras.lang.python](/extras/lang/python)
 
@@ -534,7 +483,7 @@ Part of [lazyvim.plugins.extras.lang.python](/extras/lang/python)
 | ----------------------------- | ----------------- | ----- |
 | <code>&lt;leader&gt;cv</code> | Select VirtualEnv | **n** |
 
-#### [neotest](https://github.com/nvim-neotest/neotest.git)
+## [neotest](https://github.com/nvim-neotest/neotest.git)
 
 Part of [lazyvim.plugins.extras.test.core](/extras/test/core)
 
@@ -548,7 +497,7 @@ Part of [lazyvim.plugins.extras.test.core](/extras/test/core)
 | <code>&lt;leader&gt;tt</code> | Run File            | **n** |
 | <code>&lt;leader&gt;tT</code> | Run All Test Files  | **n** |
 
-#### [nvim-dap](https://github.com/mfussenegger/nvim-dap.git)
+## [nvim-dap](https://github.com/mfussenegger/nvim-dap.git)
 
 Part of [lazyvim.plugins.extras.test.core](/extras/test/core)
 
@@ -556,7 +505,7 @@ Part of [lazyvim.plugins.extras.test.core](/extras/test/core)
 | ----------------------------- | ------------- | ----- |
 | <code>&lt;leader&gt;td</code> | Debug Nearest | **n** |
 
-#### [edgy.nvim](https://github.com/folke/edgy.nvim.git)
+## [edgy.nvim](https://github.com/folke/edgy.nvim.git)
 
 Part of [lazyvim.plugins.extras.ui.edgy](/extras/ui/edgy)
 
@@ -565,7 +514,7 @@ Part of [lazyvim.plugins.extras.ui.edgy](/extras/ui/edgy)
 | <code>&lt;leader&gt;ue</code> | Edgy Toggle        | **n** |
 | <code>&lt;leader&gt;uE</code> | Edgy Select Window | **n** |
 
-#### [project.nvim](https://github.com/ahmedkhalf/project.nvim.git)
+## [project.nvim](https://github.com/ahmedkhalf/project.nvim.git)
 
 Part of [lazyvim.plugins.extras.util.project](/extras/util/project)
 
@@ -574,17 +523,3 @@ Part of [lazyvim.plugins.extras.util.project](/extras/util/project)
 | <code>&lt;leader&gt;fp</code> | Projects    | **n** |
 
 <!-- keymaps:end -->
-
-## Credits & External Resources
-
-- [Firenvim](https://github.com/glacambre/firenvim)
-- [Vourliotis/nvim config](https://github.com/Vourliotis/nvim/tree/main)
-- [sokhuong-uon/vscode-nvim](https://github.com/sokhuong-uon/vscode-nvim/tree/main)
-- VSCode Extensions
-  - [VSCode Neovim](https://github.com/vscode-neovim/vscode-neovim)
-  - [Whichkey](https://github.com/VSpaceCode/vscode-which-key)
-  - [Toggle Boolean](https://github.com/silesky/vscode-toggle-bool)
-  - [Bookmarks](https://github.com/alefragnani/vscode-bookmarks)
-- Neovim Extensions
-  - Coding
-    - [LuaSnip](https://github.com/L3MON4D3/LuaSnip): Lua snippets

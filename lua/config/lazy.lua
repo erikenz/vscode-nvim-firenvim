@@ -16,39 +16,28 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.lang.json" },
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- Coding
-    { import = "lazyvim.plugin.extras.coding.copilot" },
-    { import = "lazyvim.plugin.extras.coding.nvim-cmp" },
-    { import = "lazyvim.plugin.extras.coding.copilot-cmp" },
-    { import = "lazyvim.plugin.extras.coding.lualine" },
-    { import = "lazyvim.plugin.extras.coding.yanky" },
+    -- { import = "lazyvim.plugins.extras.coding.copilot" },
+    -- { import = "lazyvim.plugins.extras.coding.yanky" },
     -- Editor
-    { import = "lazyvim.plugin.extras.editor.aerial" },
-    { import = "lazyvim.plugin.extras.editor.telescope" },
-    { import = "lazyvim.plugin.extras.editor.lualine" },
-    { import = "lazyvim.plugin.extras.editor.flit" },
-    { import = "lazyvim.plugin.extras.editor.leap" },
-    { import = "lazyvim.plugin.extras.editor.mini.surround" },
-    { import = "lazyvim.plugin.extras.editor.vim-repeat" },
+    -- { import = "lazyvim.plugins.extras.editor.aerial" },
+    -- { import = "lazyvim.plugins.extras.editor.leap" },
     -- Formatting
-    { import = "lazyvim.plugin.extras.formatting.prettier" },
-    { import = "lazyvim.plugin.extras.formatting.mason" },
-    { import = "lazyvim.plugin.extras.formatting.none-ls" },
-    { import = "lazyvim.plugin.extras.formatting.conform" },
+    -- { import = "lazyvim.plugins.extras.formatting.prettier" },
     -- Lang
-    { import = "lazyvim.plugin.extras.lang.json" },
-    { import = "lazyvim.plugin.extras.lang.typescript" },
-    { import = "lazyvim.plugin.extras.lang.markdown" },
-    { import = "lazyvim.plugin.extras.lang.tailwind" },
+    -- { import = "lazyvim.plugins.extras.lang.json" },
+    -- { import = "lazyvim.plugins.extras.lang.typescript" },
+    -- { import = "lazyvim.plugins.extras.lang.markdown" },
+    -- { import = "lazyvim.plugins.extras.lang.tailwind" },
     -- Linting
-    { import = "lazyvim.plugin.extras.linting.eslint" },
+    -- { import = "lazyvim.plugins.extras.linting.eslint" },
     -- LSP
-    { import = "lazyvim.plugin.extras.lsp.none-ls" },
+    -- { import = "lazyvim.plugins.extras.lsp.none-ls" },
     -- UI
-    { import = "lazyvim.plugin.extras.ui.alpha" },
+    -- { import = "lazyvim.plugins.extras.ui.alpha" },
     -- Project
-    { import = "lazyvim.plugin.extras.util.project" },
+    -- { import = "lazyvim.plugins.extras.util.project" },
     -- VSCode
-    { import = "lazyvim.plugin.extras.vscode" },
+    -- { import = "lazyvim.plugins.extras.vscode" },
     -- import/override with your plugins
     { import = "plugins" },
   },
@@ -61,7 +50,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight", "habamax" } },
+  install = { colorscheme = { "catppuccin" } },
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
     rtp = {
